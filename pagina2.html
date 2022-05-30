@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <script src="script/script2.js"></script>
+    <link rel="stylesheet" href="css/style2.css">
+    <title>Desafio 1 - HTML/CSS</title>
+</head>
+<body>
+    <header></header>
+    <main class="flex">
+
+        <!-- Mais containers serão adicionados conforme necessário na parte JavaScript -->
+
+        <section class="sidebar flex">
+            <ul>
+                <li id="btnAbrirClientes" class="ajusteFontLi flex center"><span class="material-symbols-rounded ajusteFontLi margemSpan">group_add</span>Clientes</li>
+                <li id="btnAbrirProdutos" class="ajusteFontLi flex center"><span class="material-symbols-rounded ajusteFontLi margemSpan">shopping_cart</span>Produtos</li>
+                <li id="btnAbrirPedidos" class="ajusteFontLi flex center"><span class="material-symbols-outlined ajusteFontLi margemSpan">redeem</span>Pedidos</li>
+            </ul>
+        </section>
+
+        
+        <section class="container flex flex-column center">
+
+            <!-- INÍCIO DOS CLIENTES -->
+            <div id="clientes" class="caixaInformacoes display-none">
+
+                <form method="post" name="login">
+                    <fieldset class="flex flex-column">
+
+                        <div class="flex container-btns">
+                            <h2>Clientes</h2>
+                            <input type="button" name="btn-fechar-cliente" class="btn-nav btn-fechar" id="btn-fechar-cliente" value="X">
+                        </div>
+                        
+
+                        <label for="codigo-cliente">Código</label>
+                        <input type="text" class="input-text" id="codigo-cliente" name="codigo-cliente" value="" disabled>
+                        <label for="nome-cliente">Nome</label>
+                        <input type="text" class="input-text" id="nome-cliente" name="nome-cliente" value="">
+                        <label for="data-cadastro-cliente">Data Cadastro</label>
+                        <input type="text" class="input-text" id="data-cadastro-cliente" name="data-cadastro-cliente" value="">
+                    </fieldset>
+
+                    <div class="flex container-btns">
+                        <div class="container-filho-btns">
+                            <input type="button" name="voltar-cliente" class="btn-nav" id="voltar-cliente" value="<">
+                            <input type="button" name="avancar-cliente" class="btn-nav" id="avancar-cliente" value=">"> 
+                        </div>
+
+                        <div class="flex container-filho-btns">
+                            <input type="button" name="novo-cliente" class="btn-nav btn-novo" id="novo-cliente" value="Novo">
+                            <input type="button" name="salvar-cliente" class="btn-nav btn-salvar" id="salvar-cliente" value="Salvar">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <!-- FIM DOS CLIENTES -->
+
+            <!-- INÍCIO DOS PRODUTOS -->
+            <div id="produtos" class="caixaInformacoes display-none">
+
+                <form method="post" name="login">
+                    <fieldset class="flex flex-column">
+
+                        <div class="flex container-btns">
+                            <h2>Produtos</h2>
+                            <input type="button" name="btn-fechar-produto" class="btn-nav btn-fechar" id="btn-fechar-produto" value="X">
+                        </div>
+                        
+
+                        <label for="codigo-produto">Código</label>
+                        <input type="text" class="input-text" id="codigo-produto" name="codigo-produto" value="" disabled>
+                        <label for="descricao-produto">Descrição</label>
+                        <input type="text" class="input-text" id="descricao-produto" name="descricao-produto" value="">
+                        <label for="preco-produto">Preço</label>
+                        <input type="text" class="input-text" id="preco-produto" name="preco-produto" value="">
+                        <label for="quantidade-produto">Quantidade</label>
+                        <input type="text" class="input-text" id="quantidade-produto" name="quantidade-produto" value="">
+                    </fieldset>
+
+                    <div class="flex container-btns">
+                        <div class="container-filho-btns">
+                            <input type="button" name="voltar-produto" class="btn-nav" id="voltar-produto" value="<">
+                            <input type="button" name="avancar-produto" class="btn-nav" id="avancar-produto" value=">"> 
+                        </div>
+
+                        <div class="flex container-filho-btns">
+                            <input type="button" name="novo-produto" class="btn-nav btn-novo" id="novo-produto" value="Novo">
+                            <input type="button" name="salvar-produto" class="btn-nav btn-salvar" id="salvar-produto" value="Salvar">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <!-- FIM DOS PRODUTOS -->
+
+            <!-- INÍCIO DOS PEDIDOS -->
+            <div id="pedidos" class="caixaInformacoes caixaPedido">
+
+                <form method="post" name="login">
+                    <fieldset class="flex flex-column">
+
+                        <div class="flex container-btns">
+                            <h2>Pedidos</h2>
+                            <input type="button" name="btn-fechar-cliente" class="btn-nav btn-fechar" id="btn-fechar-pedido" value="X">
+                        </div>
+                        
+
+                        <label for="codigo-cliente-pedido">Código do Cliente</label>
+                        <input type="text" class="input-text" id="codigo-cliente-pedido" name="codigo-cliente-pedido" value="">
+                        <label for="nome-cliente-pedido">Cliente</label>
+                        <input type="text" class="input-text" id="nome-cliente-pedido" name="nome-cliente-pedido" value="" disabled>
+                        
+                        <div class="linha-divisoria"> </div>
+
+                        <h3 class="cor-texto-azul bold">Localizar Produto</h3>
+                        <div class="container-pedido flex center">
+                            <input type="text" class="input-text-pedido" id="codigo-produto-pedido" name="codigo-produto-pedido" value="">
+                            <input type="text" class="input-text-pedido-descricao" id="descricao-produto-pedido" name="descricao-produto-pedido" value="" disabled>
+                            <input type="text" class="input-text-pedido-preco" id="preco-produto-pedido" name="preco-produto-pedido" value="" disabled>
+                            <input type="text" class="input-text-pedido-quantidade" id="quantidade-produto-pedido" name="quantidade-produto-pedido" value="">
+                            <input type="button" name="lancar-pedido" class="btn-pedido" id="lancar-pedido" value="Lançar no Pedido">
+                        </div>
+
+                        <div class="linha-divisoria"> </div>
+                        
+                            <h3 class="cor-texto-azul bold">Itens do Pedido</h3>
+                        
+                        <div class="flex justifystuff">
+
+                            <div class="flex flex-column">
+                                <div class="bold">Item</div>
+                                <div>1</div>
+                            </div>
+
+                            <div class="flex flex-column">
+                                <div class="bold">Descricão</div>
+                                <div>a</div>
+                            </div>
+
+                            <div class="flex flex-column">
+                                <div class="bold">Preço</div>
+                                <div>2</div>
+                            </div>
+
+                            <div class="flex flex-column">
+                                <div class="bold">Qtd</div>
+                                <div>23</div>
+                            </div>
+
+                            <div class="flex flex-column">
+                                <div class="bold">Sub Total</div>
+                                <div>40</div>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+            <!-- FIM DOS PEDIDOS -->
+
+
+
+            <div class="quadradotestedois display-none"></div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
