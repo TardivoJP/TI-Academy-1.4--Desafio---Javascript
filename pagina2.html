@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
     <script src="script/script2.js"></script>
     <link rel="stylesheet" href="css/style2.css">
-    <title>Desafio 1 - HTML/CSS</title>
+    <title>Desafio 2 - Javascript - Página 2</title>
 </head>
 <body>
     <header></header>
     <main class="flex">
 
-        <!-- Mais containers serão adicionados conforme necessário na parte JavaScript -->
-
+        
+        <!-- INÍCIO DA SIDEBAR -->
         <section class="sidebar flex">
             <ul>
                 <li id="btnAbrirClientes" class="ajusteFontLi flex center"><span class="material-symbols-rounded ajusteFontLi margemSpan">group_add</span>Clientes</li>
@@ -24,7 +24,7 @@
                 <li id="btnAbrirPedidos" class="ajusteFontLi flex center"><span class="material-symbols-outlined ajusteFontLi margemSpan">redeem</span>Pedidos</li>
             </ul>
         </section>
-
+        <!-- FIM DA SIDEBAR -->
         
         <section class="container flex flex-column center">
 
@@ -103,7 +103,7 @@
             <!-- FIM DOS PRODUTOS -->
 
             <!-- INÍCIO DOS PEDIDOS -->
-            <div id="pedidos" class="caixaInformacoes caixaPedido">
+            <div id="pedidos" class="caixaInformacoes caixaPedido display-none">
 
                 <form method="post" name="login">
                     <fieldset class="flex flex-column">
@@ -136,41 +136,37 @@
                         
                         <div class="flex justifystuff">
 
-                            <div class="flex flex-column">
+                            <div id="pedido-item" class="flex flex-column">
                                 <div class="bold">Item</div>
-                                <div>1</div>
                             </div>
 
-                            <div class="flex flex-column">
+                            <div id="pedido-descricao" class="flex flex-column">
                                 <div class="bold">Descricão</div>
-                                <div>a</div>
                             </div>
 
-                            <div class="flex flex-column">
+                            <div id="pedido-preco" class="flex flex-column">
                                 <div class="bold">Preço</div>
-                                <div>2</div>
                             </div>
 
-                            <div class="flex flex-column">
+                            <div id="pedido-qtd" class="flex flex-column">
                                 <div class="bold">Qtd</div>
-                                <div>23</div>
                             </div>
 
-                            <div class="flex flex-column">
+                            <div id="pedido-sub-total" class="flex flex-column">
                                 <div class="bold">Sub Total</div>
-                                <div>40</div>
                             </div>
 
                         </div>
+
+                        <div id="container-valor-total-pedido" class="flex flex-end display-none">
+                            <div id="valor-total-pedido" class="flex total-pedido"></div>
+                        </div>
+
                     </fieldset>
                 </form>
 
             </div>
             <!-- FIM DOS PEDIDOS -->
-
-
-
-            <div class="quadradotestedois display-none"></div>
         </section>
     </main>
     <footer></footer>
